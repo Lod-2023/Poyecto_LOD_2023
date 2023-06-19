@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pantalla Principal</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <rigth><img src="img/img_LOD.png"  width="50" height="50"></rigth>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar..." aria-label="Buscar..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Ajustes</a></li>
+                        <li><a class="dropdown-item" href="#!">Registro de actividades</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Panel de control</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Inicio
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Actividades</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Disponibilidad
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <!-- <a class="nav-link" href="layout-static.html"></a> -->
+                                    <a class="nav-link" href="calendario.html">Agenda Comercial</a>
+                                </nav>
+                            </div>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <!-- <a class="nav-link" href="layout-static.html"></a> -->
+                                    <a class="nav-link" href="calendario.html">Crear solicitud</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Linea Ortopedica
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Sets
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/medicina-deportiva/">Medicina Deportiva</a>
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/trauma/">Trauma</a>
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/fijacion-externa/">Fijacion Externa</a>
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/craneomaxilofacial/">Maxilo</a>
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/endoprotesis/">Endoprotesis</a>
+                                            <a class="nav-link" href="https://www.lineashospitalarias.com/osteosintesis/columna/">Columna</a>
+                                        </nav>
+                                    </div>
+                                  
+                                </nav>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Lod:</div>
+                        
+                    </div>
+                
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Inicio</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Inicio</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Set remitidos</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Set incompletos</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Set disponibles </div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Set retirados</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver detalles</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Cant. set alquilados ultimos 6 meses
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                       Cant. set disponble utimos 6 meses 
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Set
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Nombre</th>
+                                            <th>Linea ortopepdica</th>
+                                            <th>Ubicaciòn</th>
+                                            <th>Completo</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Codigo</th>
+                                            <th>Nombre</th>
+                                            <th>Linea ortopepdica</th>
+                                            <th>Ubicaciòn</th>
+                                            <th>Completo</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>40708007</td>
+                                            <td>Set basico de 1.5/2.0 mm No 07</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Clinica Nueva</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708008</td>
+                                            <td>Set basico de 1.5/2.0 mm No 08</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Hospital maria auxliadora</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708030</td>
+                                            <td>Set basico de 1.5/2.0 mm No 30</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#x2716;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708047</td>
+                                            <td>Set basico de 1.5/2.0 mm No 47</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708059</td>
+                                            <td>Set basico de 1.5/2.0 mm No 59</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#x2716;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708063</td>
+                                            <td>Set basico de 1.5/2.0 mm No 63</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#x2716;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708081</td>
+                                            <td>Set basico de 1.5/2.0 mm No 81</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708082</td>
+                                            <td>Set basico de 1.5/2.0 mm No 82</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                        <tr>
+                                            <td>40708085</td>
+                                            <td>Set basico de 1.5/2.0 mm No 85</td>                                            
+                                            <td>Trauma</td>
+                                            <td>Disponible</td>
+                                            <td><center>&#10004;</center></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
